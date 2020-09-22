@@ -1,78 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>React para Iniciantes</title>
-
-    <!-- Carrega o React, React Dom e Babel -->
-    <script
-      crossorigin
-      src="https://unpkg.com/react@16/umd/react.development.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
-    ></script>
-    <script
-      crossorigin
-      src="https://unpkg.com/@babel/standalone@7/babel.min.js"
-    ></script>
+    <title>React</title>
   </head>
-
   <body>
-    <div id="app">App</div>
-    <!-- Precisa indicar para o Babel que ele deve transpilar o código -->
-    <script type="text/babel">
-      // Cria um componente chamado App
-      // O componente retorna JSX e por isso
-      // o Babel irá transformar o mesmo
-
-      const Compras = () => {
-        const [contador, setContador] = React.useState(0);
-
-        const comprar = () => {
-          setContador(contador + 1);
-        };
-        return (
-          <div>
-            <button onClick={comprar}>Comprar </button>
-            <p>Total: {contador} </p>
-            <p>Preço: R$ {contador * 250} </p>
-          </div>
-        );
-      };
-
-      const Button = () => {
-        function handleClick(event) {
-          console.log(event.target.innerText);
-        }
-
-        return <button onClick={handleClick}> Comprar </button>;
-      };
-
-      const Titulo = () => {
-        const numero = Math.random() * 1000;
-        return <h1> Meu Título {numero} </h1>;
-      };
-
-      const App = () => {
-        return (
-          <div>
-            <Compras />
-            Meu App
-            <Titulo />
-            <Button />
-            <div>
-              Compre aqui também.
-              <Button />
-            </div>
-          </div>
-        );
-      };
-
-      // Renderiza o componente App no elemento que tiver id = app
-      ReactDOM.render(<App />, document.getElementById("app"));
-    </script>
+    <div id="root"></div>
+    <script src="main.js"></script>
   </body>
 </html>
